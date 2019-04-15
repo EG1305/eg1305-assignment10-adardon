@@ -8,9 +8,8 @@ public class TestRectangle {
 		System.out.println("Enter the number of rectangles to be created");
 
 		int userInput = input.nextInt();
-
+		
 		Rectangle[] rectangleArray = new Rectangle[userInput];
-
 		createRectangles(rectangleArray);
 
 		System.out.println("Here are the rectangles that you created");
@@ -27,7 +26,8 @@ public class TestRectangle {
 
 	private static void createRectangles(Rectangle[] rectangleArray) {
 
-		double length, width;
+		double length; 
+		double width;
 
 		Scanner input = new Scanner(System.in);
 
@@ -41,7 +41,7 @@ public class TestRectangle {
 
 		}
 
-		input.close();
+	
 	}
 
 }

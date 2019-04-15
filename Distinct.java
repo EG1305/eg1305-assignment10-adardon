@@ -3,33 +3,27 @@ import java.util.Scanner;
 
 
 public class Distinct {
-
 	public static void main(String[] args) {
-		
-		int[]user = new int[10];
 		Scanner input = new Scanner(System.in);
+		int[] choice = new int[10];
 		
 		for (int i = 0; i< userInput.length; i++){
 			System.out.print("Enter integer " + (i + 1) + ":");
-			user[i] = input.nextInt();
+			choice[i] = input.nextInt();
 		}
 		
-		
 		System.out.println("Distinct numbers are: ");
-		
-		distinctNumbers(user,user.length);
-
-		
+		distinctNumbers(choice,choice.length);
 	}
 
-	private static void distinctNumbers(int[] user, int length) {
-		Arrays.sort(user);
+	private static void distinctNumbers(int[] choice, int length) {
+		Arrays.sort(choice);
 		
 		for(int i = 0; i < length; i++){
-			while (i < length - 1 && user[i] == user[i + 1]) 
+			while (i < length - 1 && choice[i] == choice[i + 1]) 
                 i++;
 			
-			System.out.print(user[i] + " ");
+			System.out.print(choice[i] + " ");
 		}
 	}
 

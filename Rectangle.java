@@ -4,9 +4,9 @@ public class Rectangle {
 	private double width;
 	
 	
-	public Rectangle(double l, double w){
-		length = l;
-		width = w;
+	public Rectangle(double length, double width){
+		length = this.length;
+		width = this.width;
 		
 	}
 	

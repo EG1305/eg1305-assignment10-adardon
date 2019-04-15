@@ -6,50 +6,40 @@ public class Lottery {
 		System.out.println("Enter a series of 5 numbers from 0 to 9.");
 
 		int[] series = new int[5];
+		series = getValues();
 
-		values = getValues();
-
-		int[] lottery = new int[5];
-
-		lottery = getLottery();
-
+		int[] lotteryArray = new int[5];
+		lotteryArray = getLottery();
 		System.out.print("\nThe lottery numbers are: ");
 
-		for (int i : lottery) {
+		for (int i : lotteryArray) {
 			System.out.print(i + " ");
 		}
 
-		int matched = compareNumbers(series, lottery);
-
+		int matched = compareNumbers(series, lotteryArray);
 		System.out.println("\nYou matched " + matched + " numbers");
+		
 		if (matched > 0) {
 			System.out.println("The matching numbers are: ");
-			printMatchedNumers(series, lottery);
+			printMatchedNumers(series, lotteryArray);
 		}
+}
 
-	}
-
-	private static void printMatchedNumers(int[] series, int[] lottery) {
+	private static void printMatchedNumers(int[] series, int[] lotteryArray) {
 		for (int i = 0; i < series.length; i++) {
-
-			if (series[i] == lottery[i]) {
+			if (series[i] == lotteryArray[i]) {
 				System.out.print(series[i] + " ");
 			}
-
 		}
 
 	}
 
-	private static int compareNumbers(int[] series, int[] lottery) {
-
+	private static int compareNumbers(int[] series, int[] lotteryArray) {
 		int matching = 0;
-
 		for (int i = 0; i < series.length; i++) {
-
-			if (series[i] == lottery[i]) {
+			if (series[i] == lotteryArray[i]) {
 				matching++;
 			}
-
 		}
 		return matching;
 	}
@@ -73,7 +63,6 @@ public class Lottery {
 			System.out.print("Enter number " + (i + 1) + ":");
 			getArray[i] = input.nextInt();
 		}
-		input.close();
 		return getArray;
 
 	}
