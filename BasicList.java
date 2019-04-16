@@ -1,3 +1,6 @@
+
+
+
 import java.util.ArrayList;
 
 public class BasicList {
@@ -11,7 +14,7 @@ public class BasicList {
 		}
 
 		System.out.println(myList);
-		System.out.println("Size of the list is " + myList.size())
+		System.out.println("Size of the list is " + myList.size());
 		myList.add(myList.size() / 2, 200);
 		System.out.println(myList);
 		System.out.println("Size of the list is " + myList.size());
@@ -20,3 +23,5 @@ public class BasicList {
 	}
 
 }
+
+
